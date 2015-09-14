@@ -13,7 +13,21 @@
 
 //static pages
 
+//index/homepage series
 Route::get('/', 'PagesController@index');
+
+Route::get('/privacy', 'PagesController@privacy');
+Route::get('/help', 'PagesController@help');
+
+
+
+//about series
 Route::get('/about', 'PagesController@about');
 
 
+//tools page
+Route::resource('/tools', 'ToolsController@index');
+
+
+//account page
+Route::resource('/account', 'AccountController@index');
